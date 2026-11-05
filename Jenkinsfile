@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker build -t saisreeja2003/cicd-app:latest .'
+                    sh 'docker push saisreeja2003/cicd-app:latest'
                 }
             }
         }
