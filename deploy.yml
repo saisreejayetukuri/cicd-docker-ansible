@@ -1,0 +1,17 @@
+---
+- name: Deploy the Web Application
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Remove old container if it exists
+      docker_container:
+        name: my_live_app
+        state: absent
+
+    - name: Start the new container
+      docker_container:
+        name: my_live_app
+        image: my-dockerhub-user/cicd-app:latest
+        state: started
+        ports:
+          - "80:80"
