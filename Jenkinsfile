@@ -4,7 +4,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    sh 'docker build -t my-dockerhub-user/cicd-app:latest .'
+                    sh 'docker build -t saisreeja2003/cicd-app:latest .'
                 }
             }
         }

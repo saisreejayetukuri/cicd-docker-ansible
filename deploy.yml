@@ -11,7 +11,7 @@
     - name: Start the new container
       docker_container:
         name: my_live_app
-        image: my-dockerhub-user/cicd-app:latest
+        image: saisreeja2003/cicd-app:latest
         state: started
         ports:
           - "80:80"
